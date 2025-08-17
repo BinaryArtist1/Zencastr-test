@@ -7,6 +7,14 @@ This repo contains two small projects:
 
 I kept them in one repo just to make it easier to install and run, but in real life these would live in two separate repos.
 
+## Demo Video
+
+
+
+https://github.com/user-attachments/assets/99c66ff1-2fc7-45b1-914a-2043c59961bc
+
+
+
 ## How it’s structured
 
 ```
