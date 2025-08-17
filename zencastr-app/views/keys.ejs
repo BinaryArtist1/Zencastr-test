@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaodis Keys</title>
+  </head>
+  <body>
+    <h1>All Keys in Kaodis</h1>
+
+    <% if (keys && keys.length > 0) { %>
+    <ul>
+      <% keys.forEach(function(k){ %>
+      <li>
+        <%= k %> [<a href="/demo/get/<%= k %>" target="_blank">Get</a>] [<a
+          href="/demo/del/<%= k %>"
+          >Delete</a
+        >] [<a
+          href="<%= (process.env.KAODIS_URL || 'http://127.0.0.1:7379') + '/get/' + encodeURIComponent(k) %>"
+          target="_blank"
+        >
+          Kaodis direct API </a
+        >]
+      </li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No keys stored.</p>
+    <% } %>
+
+    <p><a href="/">Back</a></p>
+  </body>
+</html>
